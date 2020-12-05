@@ -1,14 +1,28 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>First Laravel Title</title>
-</head>
-<body>
+@extends('layouts.main')
 
-<h1>Welcome to Laravel</h1>
-<p>This is a paragraph.</p>
-<br>
-<a href="{{route('test', ['id' => 1, 'name' => 'Beyza'])}}">Test Sayfa</a>
+@section('title', 'Sub Page Title')
 
-</body>
-</html>
+@section('sidebar')
+    <div class="col-sm-4 col-lg-2" style="background-color: darkgray">
+       <ul>
+           <li>Gündem</li>
+           <li>Ekonomi</li>
+           <li>Spor</li>
+           <li>Sağlık</li>
+       </ul>
+    </div>
+@endsection
+
+@section('content')
+    <div class="col-sm-8 col-lg-10">
+        <h1>Slider</h1>
+        aaaa<br>
+        bbbbb<br>
+
+        <h1>İçeriklerimiz</h1>
+        makale <br>
+        kitap <br>
+        köşe yazısı <br>
+    </div>
+
+@endsection
