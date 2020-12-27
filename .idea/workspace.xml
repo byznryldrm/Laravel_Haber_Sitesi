@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9db2974f-0c84-485f-87ab-d0dca82726b7" name="Default Changelist" comment="&quot;fixed&quot;">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test2" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,7 +128,9 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1ln6pzEfZZ0YgILGCUtdw9TUnBB" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -160,7 +163,7 @@
       <workItem from="1608220702092" duration="965000" />
       <workItem from="1608221684999" duration="844000" />
       <workItem from="1608983499380" duration="14669000" />
-      <workItem from="1609072701586" duration="6795000" />
+      <workItem from="1609072701586" duration="7095000" />
     </task>
     <servers />
   </component>
