@@ -10,6 +10,6 @@ class Homecontroller extends Controller
 
     public function index()
     {
-        return view('layouts.main');
+        return view('home.index');
     }
 }
