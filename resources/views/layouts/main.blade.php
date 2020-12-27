@@ -1,37 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <title>@yield('title')</title>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Magz is a HTML5 & CSS3 magazine template is based on Bootstrap 3.">
+    <meta name="author" content="Kodinger">
+    <meta name="keyword" content="magz, html5, css3, template, magazine template">
+    <!-- Shareable -->
+    <meta property="og:title" content="HTML5 & CSS3 magazine template is based on Bootstrap 3" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="http://github.com/nauvalazhar/Magz" />
+    <meta property="og:image" content="https://raw.githubusercontent.com/nauvalazhar/Magz/master/images/preview.png"/>
+
+    <title>@yield('title')</title>
+    <meta name="description" content="@yield('description')">
+    <meta name="keywords" content="@yield('keywords')">
+    <meta name="author" content="Kahtalı Miçe">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="{{asset('assets')}}/scripts/bootstrap/bootstrap.min.css">
+    <!-- IonIcons -->
+    <link rel="stylesheet" href="{{asset('assets')}}/scripts/ionicons/css/ionicons.min.css">
+    <!-- Toast -->
+    <link rel="stylesheet" href="{{asset('assets')}}/scripts/toast/jquery.toast.min.css">
+    <!-- OwlCarousel -->
+    <link rel="stylesheet" href="{{asset('assets')}}/scripts/owlcarousel/dist/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="{{asset('assets')}}/scripts/owlcarousel/dist/assets/owl.theme.default.min.css">
+    <!-- Magnific Popup -->
+    <link rel="stylesheet" href="{{asset('assets')}}/scripts/magnific-popup/dist/magnific-popup.css">
+    <link rel="stylesheet" href="{{asset('assets')}}/scripts/sweetalert/dist/sweetalert.css">
+    <!-- Custom style -->
+    <link rel="stylesheet" href="{{asset('assets')}}/css/style.css">
+    <link rel="stylesheet" href="{{asset('assets')}}/css/skins/all.css">
+    <link rel="stylesheet" href="{{asset('assets')}}/css/demo.css">
     @yield('css')
-    @yield('js')
+    @yield('headerjs')
 
 </head>
+
 <body>
+@include('home._header')
 
-<div class="jumbotron text-center">
-    <h1>Header</h1>
-    <p>Resize this responsive page to see the effect!</p>
-    <a href="/" >Home</a>
-    <a href="/aboutus" >About Us</a>
-    @yield('header')
-</div>
+@include('home._slider')
 
-<div class="container">
-    <div class="row">
-        @yield('sidebar')
-        @yield('content')
-    </div>
-</div>
-
-<div class="jumbotron text-center">
-    <h1>Footor</h1>
-    <p>sayfa altı</p>
-    @yield('footer')
-</div>
-
+@include('home._footer')
+@yield('footerjs')
 </body>
 </html>
