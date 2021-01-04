@@ -22,10 +22,13 @@
 </head>
 
 <body>
+    @include('admin._sidebar')
+    <div class="main-content" id="panel">
     @include('admin._header')
+    @yield('content')
+    </div>
     @include('admin._footer')
     @yield('footer')
 </body>
-
 </html>
 
