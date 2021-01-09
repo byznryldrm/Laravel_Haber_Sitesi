@@ -4,6 +4,7 @@ namespace App\Http\Controllers\admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class homecontroller extends Controller
 {
@@ -12,5 +13,6 @@ class homecontroller extends Controller
     {
         return view('admin.index');
     }
+
 
 }
