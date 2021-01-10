@@ -40,17 +40,16 @@
         <!-- Menu -->
         <div class="menu">
             <ul class="list">
-                <li class="header">MAIN NAVIGATION</li>
-                <li class="active">
-                    <a href="index.html">
-                        <i class="material-icons">home</i>
-                        <span>Home</span>
-                    </a>
-                </li>
                 <li>
                     <a href="pages/typography.html">
                         <i class="material-icons">text_fields</i>
                         <span>Typography</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ route('admin_category') }}" class="menu-toggle">
+                        <i class="material-icons">layers</i>
+                        <span>Category</span>
                     </a>
                 </li>
                 <li>

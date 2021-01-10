@@ -1031,204 +1031,258 @@
     <collation id="329" parent="1" name="utf8mb4_vietnamese_ci">
       <Charset>utf8mb4</Charset>
     </collation>
-    <table id="330" parent="4" name="migrations">
+    <table id="330" parent="4" name="categories">
       <Collation>utf8mb4_unicode_ci</Collation>
     </table>
-    <table id="331" parent="4" name="personal_access_tokens">
+    <table id="331" parent="4" name="migrations">
       <Collation>utf8mb4_unicode_ci</Collation>
     </table>
-    <table id="332" parent="4" name="sessions">
+    <table id="332" parent="4" name="personal_access_tokens">
       <Collation>utf8mb4_unicode_ci</Collation>
     </table>
-    <table id="333" parent="4" name="users">
+    <table id="333" parent="4" name="sessions">
       <Collation>utf8mb4_unicode_ci</Collation>
     </table>
-    <column id="334" parent="330" name="id">
+    <table id="334" parent="4" name="users">
+      <Collation>utf8mb4_unicode_ci</Collation>
+    </table>
+    <column id="335" parent="330" name="id">
+      <Position>1</Position>
+      <DataType>bigint(20) unsigned|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>null</SequenceIdentity>
+    </column>
+    <column id="336" parent="330" name="parent_id">
+      <Position>2</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>0</DefaultExpression>
+    </column>
+    <column id="337" parent="330" name="title">
+      <Position>3</Position>
+      <DataType>varchar(150)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="338" parent="330" name="keywords">
+      <Position>4</Position>
+      <DataType>varchar(255)|0s</DataType>
+    </column>
+    <column id="339" parent="330" name="description">
+      <Position>5</Position>
+      <DataType>varchar(255)|0s</DataType>
+    </column>
+    <column id="340" parent="330" name="image">
+      <Position>6</Position>
+      <DataType>varchar(100)|0s</DataType>
+    </column>
+    <column id="341" parent="330" name="slug">
+      <Position>7</Position>
+      <DataType>varchar(100)|0s</DataType>
+    </column>
+    <column id="342" parent="330" name="status">
+      <Position>8</Position>
+      <DataType>varchar(5)|0s</DataType>
+      <DefaultExpression>&apos;false&apos;</DefaultExpression>
+    </column>
+    <column id="343" parent="330" name="created_at">
+      <Position>9</Position>
+      <DataType>timestamp|0s</DataType>
+    </column>
+    <column id="344" parent="330" name="updated_at">
+      <Position>10</Position>
+      <DataType>timestamp|0s</DataType>
+    </column>
+    <key id="345" parent="330" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="346" parent="331" name="id">
       <Position>1</Position>
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="335" parent="330" name="migration">
+    <column id="347" parent="331" name="migration">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="336" parent="330" name="batch">
+    <column id="348" parent="331" name="batch">
       <Position>3</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <key id="337" parent="330" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <ColNames>id</ColNames>
-      <Primary>1</Primary>
-    </key>
-    <column id="338" parent="331" name="id">
-      <Position>1</Position>
-      <DataType>bigint(20) unsigned|0s</DataType>
-      <NotNull>1</NotNull>
-      <SequenceIdentity>null</SequenceIdentity>
-    </column>
-    <column id="339" parent="331" name="tokenable_type">
-      <Position>2</Position>
-      <DataType>varchar(255)|0s</DataType>
-      <NotNull>1</NotNull>
-    </column>
-    <column id="340" parent="331" name="tokenable_id">
-      <Position>3</Position>
-      <DataType>bigint(20) unsigned|0s</DataType>
-      <NotNull>1</NotNull>
-    </column>
-    <column id="341" parent="331" name="name">
-      <Position>4</Position>
-      <DataType>varchar(255)|0s</DataType>
-      <NotNull>1</NotNull>
-    </column>
-    <column id="342" parent="331" name="token">
-      <Position>5</Position>
-      <DataType>varchar(64)|0s</DataType>
-      <NotNull>1</NotNull>
-    </column>
-    <column id="343" parent="331" name="abilities">
-      <Position>6</Position>
-      <DataType>text|0s</DataType>
-    </column>
-    <column id="344" parent="331" name="last_used_at">
-      <Position>7</Position>
-      <DataType>timestamp|0s</DataType>
-    </column>
-    <column id="345" parent="331" name="created_at">
-      <Position>8</Position>
-      <DataType>timestamp|0s</DataType>
-    </column>
-    <column id="346" parent="331" name="updated_at">
-      <Position>9</Position>
-      <DataType>timestamp|0s</DataType>
-    </column>
-    <index id="347" parent="331" name="personal_access_tokens_token_unique">
-      <ColNames>token</ColNames>
-      <Unique>1</Unique>
-      <Type>btree</Type>
-    </index>
-    <index id="348" parent="331" name="personal_access_tokens_tokenable_type_tokenable_id_index">
-      <ColNames>tokenable_type
-tokenable_id</ColNames>
-      <Type>btree</Type>
-    </index>
     <key id="349" parent="331" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="350" parent="331" name="personal_access_tokens_token_unique">
-      <ColNames>token</ColNames>
-      <UnderlyingIndexName>personal_access_tokens_token_unique</UnderlyingIndexName>
-    </key>
-    <column id="351" parent="332" name="id">
-      <Position>1</Position>
-      <DataType>varchar(255)|0s</DataType>
-      <NotNull>1</NotNull>
-    </column>
-    <column id="352" parent="332" name="user_id">
-      <Position>2</Position>
-      <DataType>bigint(20) unsigned|0s</DataType>
-    </column>
-    <column id="353" parent="332" name="ip_address">
-      <Position>3</Position>
-      <DataType>varchar(45)|0s</DataType>
-    </column>
-    <column id="354" parent="332" name="user_agent">
-      <Position>4</Position>
-      <DataType>text|0s</DataType>
-    </column>
-    <column id="355" parent="332" name="payload">
-      <Position>5</Position>
-      <DataType>text|0s</DataType>
-      <NotNull>1</NotNull>
-    </column>
-    <column id="356" parent="332" name="last_activity">
-      <Position>6</Position>
-      <DataType>int(11)|0s</DataType>
-      <NotNull>1</NotNull>
-    </column>
-    <index id="357" parent="332" name="sessions_user_id_index">
-      <ColNames>user_id</ColNames>
-      <Type>btree</Type>
-    </index>
-    <index id="358" parent="332" name="sessions_last_activity_index">
-      <ColNames>last_activity</ColNames>
-      <Type>btree</Type>
-    </index>
-    <key id="359" parent="332" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <ColNames>id</ColNames>
-      <Primary>1</Primary>
-    </key>
-    <column id="360" parent="333" name="id">
+    <column id="350" parent="332" name="id">
       <Position>1</Position>
       <DataType>bigint(20) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="361" parent="333" name="name">
+    <column id="351" parent="332" name="tokenable_type">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="362" parent="333" name="email">
+    <column id="352" parent="332" name="tokenable_id">
       <Position>3</Position>
-      <DataType>varchar(255)|0s</DataType>
+      <DataType>bigint(20) unsigned|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="363" parent="333" name="email_verified_at">
+    <column id="353" parent="332" name="name">
       <Position>4</Position>
-      <DataType>timestamp|0s</DataType>
-    </column>
-    <column id="364" parent="333" name="password">
-      <Position>5</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="365" parent="333" name="two_factor_secret">
+    <column id="354" parent="332" name="token">
+      <Position>5</Position>
+      <DataType>varchar(64)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="355" parent="332" name="abilities">
       <Position>6</Position>
       <DataType>text|0s</DataType>
     </column>
-    <column id="366" parent="333" name="two_factor_recovery_codes">
+    <column id="356" parent="332" name="last_used_at">
       <Position>7</Position>
-      <DataType>text|0s</DataType>
+      <DataType>timestamp|0s</DataType>
     </column>
-    <column id="367" parent="333" name="remember_token">
+    <column id="357" parent="332" name="created_at">
       <Position>8</Position>
-      <DataType>varchar(100)|0s</DataType>
+      <DataType>timestamp|0s</DataType>
     </column>
-    <column id="368" parent="333" name="current_team_id">
+    <column id="358" parent="332" name="updated_at">
       <Position>9</Position>
-      <DataType>bigint(20) unsigned|0s</DataType>
-    </column>
-    <column id="369" parent="333" name="profile_photo_path">
-      <Position>10</Position>
-      <DataType>text|0s</DataType>
-    </column>
-    <column id="370" parent="333" name="created_at">
-      <Position>11</Position>
       <DataType>timestamp|0s</DataType>
     </column>
-    <column id="371" parent="333" name="updated_at">
-      <Position>12</Position>
-      <DataType>timestamp|0s</DataType>
-    </column>
-    <index id="372" parent="333" name="users_email_unique">
-      <ColNames>email</ColNames>
+    <index id="359" parent="332" name="personal_access_tokens_token_unique">
+      <ColNames>token</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <key id="373" parent="333" name="PRIMARY">
+    <index id="360" parent="332" name="personal_access_tokens_tokenable_type_tokenable_id_index">
+      <ColNames>tokenable_type
+tokenable_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="361" parent="332" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="374" parent="333" name="users_email_unique">
+    <key id="362" parent="332" name="personal_access_tokens_token_unique">
+      <ColNames>token</ColNames>
+      <UnderlyingIndexName>personal_access_tokens_token_unique</UnderlyingIndexName>
+    </key>
+    <column id="363" parent="333" name="id">
+      <Position>1</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="364" parent="333" name="user_id">
+      <Position>2</Position>
+      <DataType>bigint(20) unsigned|0s</DataType>
+    </column>
+    <column id="365" parent="333" name="ip_address">
+      <Position>3</Position>
+      <DataType>varchar(45)|0s</DataType>
+    </column>
+    <column id="366" parent="333" name="user_agent">
+      <Position>4</Position>
+      <DataType>text|0s</DataType>
+    </column>
+    <column id="367" parent="333" name="payload">
+      <Position>5</Position>
+      <DataType>text|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="368" parent="333" name="last_activity">
+      <Position>6</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="369" parent="333" name="sessions_user_id_index">
+      <ColNames>user_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="370" parent="333" name="sessions_last_activity_index">
+      <ColNames>last_activity</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="371" parent="333" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="372" parent="334" name="id">
+      <Position>1</Position>
+      <DataType>bigint(20) unsigned|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>null</SequenceIdentity>
+    </column>
+    <column id="373" parent="334" name="name">
+      <Position>2</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="374" parent="334" name="email">
+      <Position>3</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="375" parent="334" name="email_verified_at">
+      <Position>4</Position>
+      <DataType>timestamp|0s</DataType>
+    </column>
+    <column id="376" parent="334" name="password">
+      <Position>5</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="377" parent="334" name="two_factor_secret">
+      <Position>6</Position>
+      <DataType>text|0s</DataType>
+    </column>
+    <column id="378" parent="334" name="two_factor_recovery_codes">
+      <Position>7</Position>
+      <DataType>text|0s</DataType>
+    </column>
+    <column id="379" parent="334" name="remember_token">
+      <Position>8</Position>
+      <DataType>varchar(100)|0s</DataType>
+    </column>
+    <column id="380" parent="334" name="current_team_id">
+      <Position>9</Position>
+      <DataType>bigint(20) unsigned|0s</DataType>
+    </column>
+    <column id="381" parent="334" name="profile_photo_path">
+      <Position>10</Position>
+      <DataType>text|0s</DataType>
+    </column>
+    <column id="382" parent="334" name="created_at">
+      <Position>11</Position>
+      <DataType>timestamp|0s</DataType>
+    </column>
+    <column id="383" parent="334" name="updated_at">
+      <Position>12</Position>
+      <DataType>timestamp|0s</DataType>
+    </column>
+    <index id="384" parent="334" name="users_email_unique">
+      <ColNames>email</ColNames>
+      <Unique>1</Unique>
+      <Type>btree</Type>
+    </index>
+    <key id="385" parent="334" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="386" parent="334" name="users_email_unique">
       <ColNames>email</ColNames>
       <UnderlyingIndexName>users_email_unique</UnderlyingIndexName>
     </key>
