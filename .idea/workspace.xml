@@ -1809,6 +1809,7 @@
       <change beforePath="$PROJECT_DIR$/public/assets/admin/scss/themes/theme-teal.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/admin/scss/themes/theme-teal.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/assets/admin/scss/themes/theme-yellow.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/admin/scss/themes/theme-yellow.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/category.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/category.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/category_add.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/category_add.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/temp/template/AdminBSBMaterialDesign" beforeDir="false" afterPath="$PROJECT_DIR$/temp/template/AdminBSBMaterialDesign" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/temp/template/AdminBSBMaterialDesign/LICENSE.md" beforeDir="false" afterPath="$PROJECT_DIR$/temp/template/AdminBSBMaterialDesign/LICENSE.md" afterDir="false" />
@@ -3807,7 +3808,9 @@
       <workItem from="1609790334849" duration="20183000" />
       <workItem from="1610044178506" duration="42590000" />
       <workItem from="1610224666764" duration="345000" />
-      <workItem from="1610275126082" duration="38145000" />
+      <workItem from="1610275126082" duration="38318000" />
+      <workItem from="1610564534608" duration="7045000" />
+      <workItem from="1610819469635" duration="6863000" />
     </task>
     <servers />
   </component>

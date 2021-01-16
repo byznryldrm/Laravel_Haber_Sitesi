@@ -45,7 +45,8 @@ Route::middleware('auth')->prefix('admin')->group(function(){
     Route::get('/category', [App\Http\Controllers\admin\CategoryController::class, 'index'])->name('admin_category');
     Route::get('/category/add', [App\Http\Controllers\admin\CategoryController::class, 'add'])->name('admin_category_add');
     Route::post('/category/create', [App\Http\Controllers\admin\CategoryController::class, 'create'])->name('admin_category_create');
-    Route::post('/category/update', [App\Http\Controllers\admin\CategoryController::class, 'update'])->name('admin_category_update');
+    Route::get('/category/edit/{id}', [App\Http\Controllers\admin\CategoryController::class, 'edit'])->name('admin_category_edit');
+    Route::post('/category/update/{id}', [App\Http\Controllers\admin\CategoryController::class, 'update'])->name('admin_category_update');
     Route::get('/category/delete/{id}', [App\Http\Controllers\admin\CategoryController::class, 'destroy'])->name('admin_category_delete');
     Route::get('/category/show', [App\Http\Controllers\admin\CategoryController::class, 'show'])->name('admin_category_show');
 

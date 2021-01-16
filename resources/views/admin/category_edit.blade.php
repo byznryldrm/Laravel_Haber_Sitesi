@@ -1,38 +1,38 @@
 @extends('layouts.admin')
 
-@section('title','Admin Panel Home Page')
+@section('title','Edit Category')
 
 @section('content')
 
     <section class="content">
         <div class="card">
             <div class="card-header">
-                <h2>Add Category</h2>
+                <h2>Edit Category</h2>
             </div>
         </div>
         <div class="card-body">
             <div class="card">
                 <div class="body">
-                    <form id="form_validation" action="{{ route('admin_category_create') }}" method="POST" novalidate="novalidate">
+                    <form id="form_validation" action="{{ route('admin_category_update',['id' => $data->id]) }}" method="POST" novalidate="novalidate">
                         @csrf
                         <div class="form-group">
                             <label>Parent</label>
-                            <select class="form-control show-tick">
+                            <select class="form-control" name="parent_id" show-tick>
                                 <option value="0">Main Category</option>
                                 @foreach($datalist as $rs)
-                                    <option value="{{ $rs->id}}"> {{ $rs->title}} </option>
+                                    <option value="{{ $rs->id}}" @if($rs->id == $data->parent_id) selected="selected" @endif> {{$rs->title}} </option>
                                 @endforeach
                             </select>>
                         </div>
                         <div class="form-group form-float">
                             <div class="form-line">
-                                <input type="text" class="form-control" name="title" required="" aria-required="true">
+                                <input type="text" class="form-control" name="title" value="{{$data->title}}" required="" aria-required="true">
                                 <label>Title</label>
                             </div>
                         </div>
                         <div class="form-group form-float">
                             <div class="form-line">
-                                <input type="text" class="form-control" name="Keywords" required="" aria-required="true">
+                                <input type="text" class="form-control" name="keywords" value="{{$data->keywords}}" required="" aria-required="true">
                                 <label>Keywords</label>
                             </div>
                         </div>
@@ -45,13 +45,13 @@
                         </div>
                         <div class="form-group form-float">
                             <div class="form-line">
-                                <textarea name="description" cols="" rows="" class="form-control no-resize" required="" aria-required="true"></textarea>
+                                <textarea name="description" value="{{$data->description}}" cols="" rows="" class="form-control no-resize" required="" aria-required="true"></textarea>
                                 <label>Description</label>
                             </div>
                         </div>
                         <div class="form-group form-float">
                             <div class="form-line">
-                                <input type="text" class="form-control" name="Slug" required="" aria-required="true">
+                                <input type="text" class="form-control" name="Slug" value="{{$data->Slug}}" required="" aria-required="true">
                                 <label>Slug</label>
                             </div>
                         </div>
@@ -61,19 +61,19 @@
                                     <div class="col-sm-6">
                                         <label >Status</label>
                                         <select class="form-control"name="status" show-tick>
-                                            <option selected="selected">False</option>
+                                            <option selected="selected">{{$data->status}}</option>
+                                            <option>False</option>
                                             <option>True</option>
-
                                         </select>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="form-group">
-                            <input type="checkbox" id="checkbox" name="checkbox">
+                            <input type="checkbox" id="checkbox" value="{{$data->checkbox}}" name="checkbox">
                             <label for="checkbox">I have read and accept the terms</label>
                         </div>
-                        <button class="btn btn-primary waves-effect" type="submit">Add Category</button>
+                        <button class="btn btn-primary waves-effect" type="submit">Update Category</button>
                     </form>
                 </div>
             </div>
