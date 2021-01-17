@@ -50,6 +50,18 @@ Route::middleware('auth')->prefix('admin')->group(function(){
     Route::get('/category/delete/{id}', [App\Http\Controllers\admin\CategoryController::class, 'destroy'])->name('admin_category_delete');
     Route::get('/category/show', [App\Http\Controllers\admin\CategoryController::class, 'show'])->name('admin_category_show');
 
+    //***News***
+    Route::prefix('news')->group(function () {
+        Route::get('/', [App\Http\Controllers\admin\NewsController::class, 'index'])->name('admin_news');
+        Route::get('create', [App\Http\Controllers\admin\NewsController::class, 'create'])->name('admin_news_add');
+        Route::post('store', [App\Http\Controllers\admin\NewsController::class, 'store'])->name('admin_news_store');
+        Route::get('edit/{id}',[App\Http\Controllers\admin\NewsController::class, 'edit'])->name('admin_news_edit');
+        Route::post('update/{id}',[App\Http\Controllers\admin\NewsController::class, 'update'])->name('admin_news_update');
+        Route::get('delete/{id}',[App\Http\Controllers\admin\NewsController::class, 'destroy'])->name('admin_news_delete');
+        Route::get('show',[App\Http\Controllers\admin\NewsController::class, 'show'])->name('admin_news_show');
+
+    });
+
 });
 
 Route::get('/admin/login', [Homecontroller::class, 'login'])->name('admin_login');

@@ -47,15 +47,15 @@
                     </a>
                 </li>
                 <li>
-                    <a href="{{ route('admin_category') }}" class="menu-toggle">
+                    <a href="{{ route('admin_category') }}">
                         <i class="material-icons">layers</i>
                         <span>Category</span>
                     </a>
                 </li>
                 <li>
-                    <a href="pages/helper-classes.html">
+                    <a href="{{ route('admin_news') }}">
                         <i class="material-icons">layers</i>
-                        <span>Helper Classes</span>
+                        <span>News</span>
                     </a>
                 </li>
                 <li>
