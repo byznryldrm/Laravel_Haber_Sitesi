@@ -37,6 +37,7 @@
                                 <th>Title</th>
                                 <th>Description</th>
                                 <th>Type</th>
+                                <th>İmage</th>
                                 <th>Status</th>
                                 <th>Edit</th>
                                 <th>Delete</th>
@@ -49,6 +50,11 @@
                                 <td>{{ $rs->title}}</td>
                                 <td>{{ $rs->description}}</td>
                                 <td>{{ $rs->type}}</td>
+                                <td>
+                                    @if($rs->image)
+                                        <img src="{{Storage::url($rs->image)}}" height="100" alt="">
+                                    @endif
+                                </td>
                                 <td>{{ $rs->status}}</td>
                                 <td><a href="{{route('admin_news_edit', ['id' => $rs->id])}}">Edit</a></td>
                                 <td><a href="{{route('admin_news_delete', ['id' => $rs->id])}}" onclick="return confirm('Delete! Are you sure?')">Delete</a></td>

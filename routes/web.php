@@ -19,6 +19,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::resource('admin.news_add','CKEditorController');
+Route::post('ckeditor/image_upload', 'CKEditorController@upload')->name('upload');
+
 Route::get('/', function () {
     return Inertia::render('Welcome', [
         'canLogin' => Route::has('login'),

@@ -13,7 +13,7 @@
         <div class="card-body">
             <div class="card">
                 <div class="body">
-                    <form id="form_validation" action="{{ route('admin_news_update',['id' => $data->id])}}" method="POST" novalidate="novalidate">
+                    <form id="form_validation" action="{{ route('admin_news_update',['id' => $data->id])}}" method="POST" enctype="multipart/form-data">
                         @csrf
                         <div class="form-group">
                             <label>Parent</label>
@@ -41,16 +41,24 @@
                                 <label>Description</label>
                             </div>
                         </div>
-                        <div class="form-group form-float">
-                            <div class="form-line">
-                                <input type="text" name="Detail" value="{{$data->detail}}" class="form-control" aria-required="true">
-                                <label>Detail</label>
-                            </div>
+                        <div class="form-group">
+                            <label>Detail</label>
+                            <br>
+                            <textarea class="form-control" id="detail" name="Detail"value="{{$data->detail}}"></textarea>
                         </div>
                         <div class="form-group form-float">
                             <div class="form-line">
                                 <input type="text" class="form-control " name="Type" value="{{$data->type}}" aria-required="true">
                                 <label>Type</label>
+                            </div>
+                        </div>
+                        <div class="form-group form-float">
+                            <div class="form-line">
+                                <input type="file" class="form-control" name="İmage" >
+                                <label>İmage</label>
+                                @if($rs->image)
+                                    <img src="{{Storage::url($rs->image)}}" height="100" alt="">
+                                @endif
                             </div>
                         </div>
                         <div class="form-group form-float">
@@ -122,5 +130,29 @@
     <script src="{{asset('assets/admin')}}/js/admin.js"></script>
     <script src="{{asset('assets/admin')}}/js/pages/tables/jquery-datatable.js"></script>
 
-    <!-- Demo Js -->
+    <script src="//cdn.ckeditor.com/4.15.1/standard/ckeditor.js"></script>
+    <script>
+        CKEDITOR.replace( 'detail', {
+            filebrowserUploadUrl: "{{route('upload', ['_token' => csrf_token() ])}}",
+            filebrowserUploadMethod: 'form'
+        });
+        $(document).ready(function (){
+            $('body').on('submit', '#submitform', function (e){
+                e.preventDefault();
+
+                $.ajax({
+                    url: $(this).attr('action'),
+                    data: new FormData(this),
+                    type:'post',
+                    contentType: false,
+                    cache:false,
+                    processData:false,
+                    success: function (data){
+                        alert(data.msg);
+                    }
+                });
+            });
+
+        });
+    </script>
 @endsection
