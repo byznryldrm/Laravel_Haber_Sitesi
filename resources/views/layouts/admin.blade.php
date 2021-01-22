@@ -2,21 +2,34 @@
 <html>
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Start your development with a Dashboard for Bootstrap 4.">
-    <meta name="author" content="Creative Tim">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <title>@yield('title')</title>
-    <!-- Favicon -->
-    <link rel="icon" href="{{asset('assets/')}}/admin/assets/img/brand/favicon.png" type="image/png">
-    <!-- Fonts -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
-    <!-- Icons -->
-    <link rel="stylesheet" href="{{asset('assets/')}}/admin/assets/vendor/nucleo/css/nucleo.css" type="text/css">
-    <link rel="stylesheet" href="{{asset('assets/')}}/admin/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css" type="text/css">
-    <!-- Page plugins -->
-    <!-- Argon CSS -->
-    <link rel="stylesheet" href="{{asset('assets/')}}/admin/assets/css/argon.css?v=1.2.0" type="text/css">
+    <!-- Favicon-->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">
+
+    <!-- Bootstrap Core Css -->
+    <link href="{{asset('assets/admin')}}/plugins/bootstrap/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Waves Effect Css -->
+    <link href="{{asset('assets/admin')}}/plugins/node-waves/waves.css" rel="stylesheet" />
+
+    <!-- Animation Css -->
+    <link href="{{asset('assets/admin')}}/plugins/animate-css/animate.css" rel="stylesheet" />
+
+    <!-- Morris Chart Css-->
+    <link href="{{asset('assets/admin')}}/plugins/morrisjs/morris.css" rel="stylesheet" />
+
+    <!-- Custom Css -->
+    <link href="{{asset('assets/admin')}}/css/style.css" rel="stylesheet">
+
+    <!-- AdminBSB Themes. You can choose a theme from css/themes instead of get all themes -->
+    <link href="{{asset('assets/admin')}}/css/themes/all-themes.css" rel="stylesheet" />
     @yield('css')
     @yield('javascript')
 </head>

@@ -64,6 +64,14 @@ Route::middleware('auth')->prefix('admin')->group(function(){
         Route::get('show',[App\Http\Controllers\admin\NewsController::class, 'show'])->name('admin_news_show');
 
     });
+    //***News Image Gallery***
+
+    Route::prefix('image')->group(function () {
+        Route::get('create/{news_id}', [App\Http\Controllers\admin\ImageController::class, 'create'])->name('admin_image_add');
+        Route::post('store/{news_id}', [App\Http\Controllers\admin\ImageController::class, 'store'])->name('admin_image_store');
+        Route::get('delete/{id}/{news_id}',[App\Http\Controllers\admin\ImageController::class, 'destroy'])->name('admin_image_delete');
+        Route::get('show',[App\Http\Controllers\admin\ImageController::class, 'show'])->name('admin_image_show');
+    });
 
 });
 
