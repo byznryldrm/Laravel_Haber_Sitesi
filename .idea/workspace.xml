@@ -1808,9 +1808,7 @@
       <change beforePath="$PROJECT_DIR$/public/assets/admin/scss/themes/theme-red.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/admin/scss/themes/theme-red.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/assets/admin/scss/themes/theme-teal.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/admin/scss/themes/theme-teal.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/assets/admin/scss/themes/theme-yellow.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/admin/scss/themes/theme-yellow.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/category.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/category.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/news.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/news.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/admin.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/admin.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/_sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/_sidebar.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/temp/template/AdminBSBMaterialDesign" beforeDir="false" afterPath="$PROJECT_DIR$/temp/template/AdminBSBMaterialDesign" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/temp/template/AdminBSBMaterialDesign/LICENSE.md" beforeDir="false" afterPath="$PROJECT_DIR$/temp/template/AdminBSBMaterialDesign/LICENSE.md" afterDir="false" />
@@ -3816,7 +3814,8 @@
       <workItem from="1610829725024" duration="16791000" />
       <workItem from="1610922652855" duration="2169000" />
       <workItem from="1611247666599" duration="21362000" />
-      <workItem from="1611309541152" duration="16288000" />
+      <workItem from="1611309541152" duration="16430000" />
+      <workItem from="1611604119609" duration="16215000" />
     </task>
     <servers />
   </component>
