@@ -74,7 +74,9 @@
                                     <li><a href="reset.html">Reset Password</a></li>
                                 </ul>
                             </li>
-                            <li><a href="category.html">Category</a></li>
+
+                            @include('home._category')
+
                             <li><a href="single.html">Single</a></li>
                             <li><a href="page.html">Page</a></li>
                             <li><a href="search.html">Search</a></li>

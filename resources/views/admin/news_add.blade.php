@@ -16,10 +16,10 @@
                     <form id="form_validation" action="{{ route('admin_news_store') }}" method="POST" enctype="multipart/form-data">
                         @csrf
                         <div class="form-group">
-                            <label>Parent</label>
+                            <label>Category</label>
                             <select class="form-control" name="Category_id" show-tick>
                                 @foreach($datalist as $rs)
-                                    <option value="{{ $rs->id}}"> {{ $rs->title}} </option>
+                                    <option value="{{ $rs->id}}"> {{ \App\Http\Controllers\Admin\CategoryController::getParentsTree($rs, $rs->title)}} </option>
                                 @endforeach
                             </select>
                         </div>

@@ -16,10 +16,12 @@
                     <form id="form_validation" action="{{ route('admin_news_update',['id' => $data->id])}}" method="POST" enctype="multipart/form-data">
                         @csrf
                         <div class="form-group">
-                            <label>Parent</label>
+                            <label>Category</label>
                             <select class="form-control" name="Category_id" show-tick>
                                 @foreach($datalist as $rs)
-                                    <option value="{{ $rs->id}}" @if($rs->id == $data->category_id) selected="selected" @endif> {{$rs->title}} </option>
+                                    <option value="{{ $rs->id}}" @if($rs->id == $data->category_id) selected="selected" @endif>
+                                        {{ \App\Http\Controllers\Admin\CategoryController::getParentsTree($rs, $rs->title)}}
+                                    </option>
                                 @endforeach
                             </select>
                         </div>
