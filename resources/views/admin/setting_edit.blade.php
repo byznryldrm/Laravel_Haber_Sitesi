@@ -1,207 +1,199 @@
+
 @extends('layouts.admin')
 
-@section('title','Setting Edit List')
+@section('title','Edit Setting')
 
 @section('content')
 
-    <section class="content">
-        <!-- Tabs With Icon Title -->
+<section class="content">
         <div class="row clearfix">
-            <form id="form_validation" action="{{ route('admin_setting_update')}}" method="post" enctype="multipart/form-data">
+            <form action="{{route('admin_setting_update')}}" method="post" enctype="multipart/form-data">
                 @csrf
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                <div class="card">
-                    <div class="header">
-                        <h2>
-                            TABS WITH ICON TITLE
-                        </h2>
-                    </div>
-                    <div class="body">
-                        <!-- Nav tabs -->
-                        <ul class="nav nav-tabs" role="tablist">
-                            <li role="presentation" class="active">
-                                <a href="#home_with_icon_title" data-toggle="tab">
-                                    <i class="material-icons">home</i>HOME
-                                </a>
-                            </li>
-                            <li role="presentation">
-                                <a href="#smtp_with_icon_title" data-toggle="tab">
-                                    <i class="material-icons">face</i> SMTP
-                                </a>
-                            </li>
-                            <li role="presentation">
-                                <a href="#socialmedia_with_icon_title" data-toggle="tab">
-                                    <i class="material-icons">person_add</i> SOCİAL MEDİA
-                                </a>
-                            </li>
-                            <li role="presentation">
-                                <a href="#aboutus_with_icon_title" data-toggle="tab">
-                                    <i class="material-icons">bookmark</i> ABOUT US
-                                </a>
-                            </li>
-                            <li role="presentation">
-                                <a href="#contanct_with_icon_title" data-toggle="tab">
-                                    <i class="material-icons">settings_phone</i> CONTANCT
-                                </a>
-                            </li>
-                            <li role="presentation">
-                                <a href="#references_with_icon_title" data-toggle="tab">
-                                    <i class="material-icons">info</i> REFERENCES
-                                </a>
-                            </li>
-                        </ul>
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="card">
+                        <div class="body">
+                            <div class="body">
+                                <!-- Nav tabs -->
+                                <ul class="nav nav-tabs tab-nav-right" role="tablist">
+                                    <li role="presentation" class="active"><a href="#home" data-toggle="tab">
+                                            <i class="material-icons">home</i>HOME</a>
+                                    </li>
+                                    <li role="presentation"><a href="#smtp" data-toggle="tab">
+                                            <i class="material-icons">face</i> SMTP</a>
+                                    </li>
+                                    <li role="presentation"><a href="#social" data-toggle="tab">
+                                            <i class="material-icons">person_add</i> SOCİAL MEDİA</a>
+                                    </li>
+                                    <li role="presentation"><a href="#aboutus" data-toggle="tab">
+                                            <i class="material-icons">bookmark</i> ABOUT US</a>
+                                    </li>
+                                    <li role="presentation"><a href="#contact" data-toggle="tab">
+                                            <i class="material-icons">settings_phone</i> CONTANCT</a>
+                                    </li>
+                                    <li role="presentation"><a href="#references" data-toggle="tab">
+                                            <i class="material-icons">info</i> REFERENCES</a>
+                                    </li>
+                                </ul>
 
-                        <!-- Tab panes -->
-                        <div class="tab-content">
-                            <div role="tabpanel" class="tab-pane fade in active" id="home_with_icon_title">
-                                <input type="hidden" class="form-control" name="id" id="id" value="{{$data->id}}">
-                                <div class="form-group form-float">
-                                    <div class="form-line">
-                                        <input type="text" class="form-control" name="title" value="{{$data->title}}" required="" aria-required="true">
-                                        <label>Title</label>
-                                    </div>
-                                </div>
-                                <div class="form-group form-float">
-                                    <div class="form-line">
-                                        <input type="text" class="form-control" name="keywords" value="{{$data->keywords}}" required="" aria-required="true">
-                                        <label>Keywords</label>
-                                    </div>
-                                </div>
-                                <div class="form-group form-float">
-                                    <div class="form-line">
-                                        <textarea name="description" value="{{$data->description}}" cols="" rows="" class="form-control no-resize" required="" aria-required="true"></textarea>
-                                        <label>Description</label>
-                                    </div>
-                                </div>
-                                <div class="form-group form-float">
-                                    <div class="form-line">
-                                        <input type="text" class="form-control" name="company" value="{{$data->company}}">
-                                        <label>Company</label>
-                                    </div>
-                                </div>
-                                <div class="form-group form-float">
-                                    <div class="form-line">
-                                        <input type="text" class="form-control" name="address" value="{{$data->address}}">
-                                        <label>Address</label>
-                                    </div>
-                                </div>
-                                <div class="form-group form-float">
-                                    <div class="form-line">
-                                        <input type="number" class="form-control" name="phone" value="{{$data->phone}}">
-                                        <label>Phone</label>
-                                    </div>
-                                </div>
-                                <div class="form-group form-float">
-                                    <div class="form-line">
-                                        <input type="number" class="form-control" name="fax" value="{{$data->fax}}">
-                                        <label>Fax</label>
-                                    </div>
-                                </div>
-                                <div class="form-group form-float">
-                                    <div class="form-line">
-                                        <input type="text" class="form-control" name="email" value="{{$data->email}}">
-                                        <label>Email</label>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <div class="row clearfix">
-                                        <div class="col-sm-6">
-                                            <label >Status</label>
-                                            <select class="form-control" name="Status" show-tick>
-                                                <option selected="selected">{{$data->status}}</option>
-                                                <option>False</option>
-                                                <option>True</option>
+                                <!-- Tab panes -->
+                                <div class="tab-content">
+                                    <div role="tabpanel" class="tab-pane fade in active" id="home">
+                                        <input type="hidden" id="id" name="id" value="{{$data->id}}" class="form-control" >
+                                        <label >Title</label>
+                                        <div class="form-group">
+                                            <div class="form-line">
+                                                <input type="text" name="title" value="{{$data->title}}" class="form-control" >
+                                            </div>
+                                        </div>
+                                        <label >Keywords</label>
+                                        <div class="form-group">
+                                            <div class="form-line">
+                                                <input type="text" name="keywords" value="{{$data->keywords}}" class="form-control" >
+                                            </div>
+                                        </div>
+                                        <label >Description</label>
+                                        <div class="form-group">
+                                            <div class="form-line">
+                                                <input type="text" name="description" value="{{$data->description}}" class="form-control" >
+                                            </div>
+                                        </div>
 
-                                            </select>
+                                        <label >Company</label>
+                                        <div class="form-group">
+                                            <div class="form-line">
+                                                <input type="text" name="company" value="{{$data->company}}" class="form-control" >
+                                            </div>
+                                        </div>
+                                        <label >Address</label>
+                                        <div class="form-group">
+                                            <div class="form-line">
+                                                <input type="text" name="address" value="{{$data->address}}" class="form-control" >
+                                            </div>
+                                        </div>
+                                        <label >Phone</label>
+                                        <div class="form-group">
+                                            <div class="form-line">
+                                                <input type="text" name="phone" value="{{$data->phone}}" class="form-control" >
+                                            </div>
+                                        </div>
+                                        <label >Fax</label>
+                                        <div class="form-group">
+                                            <div class="form-line">
+                                                <input type="text" name="fax" value="{{$data->fax}}" class="form-control" >
+                                            </div>
+                                        </div>
+                                        <label >Email</label>
+                                        <div class="form-group">
+                                            <div class="form-line">
+                                                <input type="text" name="email" value="{{$data->email}}" class="form-control" >
+                                            </div>
+                                        </div>
+                                        <label >Status</label>
+                                        <div class="form-group">
+                                            <div class="form-line">
+                                                <div class="row clearfix">
+                                                    <div class="col-sm-6">
+                                                        <select class="form-control"name="status" show-tick>
+                                                            <option selected="selected">{{$data->status}}</option>
+                                                            <option>True</option>
+                                                            <option >False</option>
+
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div role="tabpanel" class="tab-pane fade" id="smtp">
+
+
+                                        <label >Smtp Server</label>
+                                        <div class="form-group">
+                                            <div class="form-line">
+                                                <input type="text" name="smtpserver" value="{{$data->smtpserver}}" class="form-control" >
+                                            </div>
+                                        </div>
+                                        <label >Smtp Email</label>
+                                        <div class="form-group">
+                                            <div class="form-line">
+                                                <input type="text" name="smtpemail" value="{{$data->smtpemail}}" class="form-control" >
+                                            </div>
+                                        </div>
+                                        <label >Smtp Password</label>
+                                        <div class="form-group">
+                                            <div class="form-line">
+                                                <input type="password" name="smtppassword" value="{{$data->smtppassword}}" class="form-control" >
+                                            </div>
+                                        </div>
+                                        <label >Smtpport</label>
+                                        <div class="form-group">
+                                            <div class="form-line">
+                                                <input type="number" name="smtpport" value="{{$data->smtpport}}" class="form-control" >
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div role="tabpanel" class="tab-pane fade" id="social">
+
+                                        <label >Facebook</label>
+                                        <div class="form-group">
+                                            <div class="form-line">
+                                                <input type="text" name="facebook" value="{{$data->facebook}}" class="form-control" >
+                                            </div>
+                                        </div>
+                                        <label >Instagram</label>
+                                        <div class="form-group">
+                                            <div class="form-line">
+                                                <input type="text" name="instagram" value="{{$data->instagram}}" class="form-control" >
+                                            </div>
+                                        </div>
+                                        <label >Twitter</label>
+                                        <div class="form-group">
+                                            <div class="form-line">
+                                                <input type="text" name="twitter" value="{{$data->twitter}}" class="form-control" >
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div role="tabpanel" class="tab-pane fade" id="aboutus">
+                                        <label >About Us</label>
+                                        <div class="form-group">
+                                            <div class="form-line">
+                                                <textarea name="aboutus" value="{{$data->aboutus}}" class="form-control" > </textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div role="tabpanel" class="tab-pane fade" id="contact">
+                                        <label >Contact</label>
+                                        <div class="form-group">
+                                            <div class="form-line">
+                                                <textarea name="contact" value="{{$data->contact}}" class="form-control" > </textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div role="tabpanel" class="tab-pane fade" id="references">
+                                        <label >References</label>
+                                        <div class="form-group">
+                                            <div class="form-line">
+                                                <textarea name="references" value="{{$data->references}}" class="form-control" > </textarea>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div role="tabpanel" class="tab-pane fade" id="smtp_with_icon_title">
-                                <div class="form-group form-float">
-                                    <div class="form-line">
-                                        <input type="text" class="form-control" name="smtpserver" value="{{$data->smtpserver}}">
-                                        <label>Smtp Server</label>
-                                    </div>
-                                </div>
-                                <div class="form-group form-float">
-                                    <div class="form-line">
-                                        <input type="text" class="form-control" name="smtpemail" value="{{$data->smtpemail}}">
-                                        <label>Smtp Email</label>
-                                    </div>
-                                </div>
-                                <div class="form-group form-float">
-                                    <div class="form-line">
-                                        <input type="password" class="form-control" name="smtppassword" value="{{$data->smtppassword}}">
-                                        <label>Smtp Password</label>
-                                    </div>
-                                </div>
-                                <div class="form-group form-float">
-                                    <div class="form-line">
-                                        <input type="number" class="form-control" name="smtpport" value="{{$data->smtpport}}">
-                                        <label>Smtp Port</label>
-                                    </div>
-                                </div>
-                            </div>
-                            <div role="tabpanel" class="tab-pane fade" id="socialmedia_with_icon_title">
-                                <div class="form-group form-float">
-                                    <div class="form-line">
-                                        <input type="text" class="form-control" name="facebook" value="{{$data->facebook}}">
-                                        <label>Facebook</label>
-                                    </div>
-                                </div>
-                                <div class="form-group form-float">
-                                    <div class="form-line">
-                                        <input type="text" class="form-control" name="instagram" value="{{$data->instagram}}">
-                                        <label>Instagram</label>
-                                    </div>
-                                </div>
-                                <div class="form-group form-float">
-                                    <div class="form-line">
-                                        <input type="text" class="form-control" name="twitter" value="{{$data->twitter}}">
-                                        <label>Twitter</label>
-                                    </div>
-                                </div>
-                            </div>
-                            <div role="tabpanel" class="tab-pane fade" id="aboutus_with_icon_title">
-                                <div class="form-group">
-                                    <label>About Us</label>
-                                    <br>
-                                    <textarea class="form-control" id="aboutus" name="aboutus" value="{{$data->aboutus}}"></textarea>
-                                </div>
-                            </div>
-                            <div role="tabpanel" class="tab-pane fade" id="contanct_with_icon_title">
-                                <div class="form-group">
-                                    <label>Contanct</label>
-                                    <br>
-                                    <textarea class="form-control" id="contanct" name="contanct" value="{{$data->contanct}}"></textarea>
-                                </div>
-                            </div>
-                            <div role="tabpanel" class="tab-pane fade" id="references_with_icon_title">
-                                <div class="form-group">
-                                    <label>References</label>
-                                    <br>
-                                    <textarea class="form-control" id="references" name="references" value="{{$data->references}}"></textarea>
-                                </div>
-                            </div>
+                            <br>
+                            <button type="submit" class="btn btn-primary m-t-15 waves-effect"> Update Setting</button>
                         </div>
-                        <button class="btn btn-primary waves-effect" type="submit">Update Setting</button>
                     </div>
                 </div>
-            </div>
             </form>
         </div>
     </section>
 @endsection
 
+
 @section('footer')
     <!-- Jquery Core Js -->
-<script>
-    import İnput from "@/Jetstream/Input";
-    export default {
-        components: {İnput}
-    }
-</script>
+    <script src="{{asset('assets/admin')}}/plugins/jquery/jquery.min.js"></script>
 
     <!-- Bootstrap Core Js -->
     <script src="{{asset('assets/admin')}}/plugins/bootstrap/js/bootstrap.js"></script>
@@ -230,37 +222,4 @@
     <script src="{{asset('assets/admin')}}/js/admin.js"></script>
     <script src="{{asset('assets/admin')}}/js/pages/tables/jquery-datatable.js"></script>
 
-    <script src="//cdn.ckeditor.com/4.15.1/standard/ckeditor.js"></script>
-    <script>
-        CKEDITOR.replace( 'aboutus', {
-            filebrowserUploadUrl: "{{route('upload', ['_token' => csrf_token() ])}}",
-            filebrowserUploadMethod: 'form'
-        });
-        CKEDITOR.replace( 'contanct', {
-            filebrowserUploadUrl: "{{route('upload', ['_token' => csrf_token() ])}}",
-            filebrowserUploadMethod: 'form'
-        });
-        CKEDITOR.replace( 'references', {
-            filebrowserUploadUrl: "{{route('upload', ['_token' => csrf_token() ])}}",
-            filebrowserUploadMethod: 'form'
-        });
-        $(document).ready(function (){
-            $('body').on('submit', '#submitform', function (e){
-                e.preventDefault();
-
-                $.ajax({
-                    url: $(this).attr('action'),
-                    data: new FormData(this),
-                    type:'post',
-                    contentType: false,
-                    cache:false,
-                    processData:false,
-                    success: function (data){
-                        alert(data.msg);
-                    }
-                });
-            });
-
-        });
-    </script>
 @endsection

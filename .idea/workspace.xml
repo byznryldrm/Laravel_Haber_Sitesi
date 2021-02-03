@@ -2,12 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9db2974f-0c84-485f-87ab-d0dca82726b7" name="Default Changelist" comment="&quot;fixed&quot;">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/afa905a0-d64f-4732-a50e-ca1954af26b3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/afa905a0-d64f-4732-a50e-ca1954af26b3.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Actions/Fortify/UpdateUserProfileInformation.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Actions/Fortify/UpdateUserProfileInformation.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/admin/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/admin/CategoryController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/admin/NewsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/admin/NewsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Category.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/News.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/News.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/admin/SettingController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/admin/SettingController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/Authenticate.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/Authenticate.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/jetstream.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/jetstream.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/assets/admin/LICENSE.md" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/admin/LICENSE.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/assets/admin/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/admin/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/assets/admin/bower.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/admin/bower.json" afterDir="false" />
@@ -1812,13 +1817,18 @@
       <change beforePath="$PROJECT_DIR$/public/assets/admin/scss/themes/theme-red.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/admin/scss/themes/theme-red.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/assets/admin/scss/themes/theme-teal.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/admin/scss/themes/theme-teal.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/assets/admin/scss/themes/theme-yellow.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/admin/scss/themes/theme-yellow.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/category.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/category.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/category_add.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/category_add.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/category_edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/category_edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/news.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/news.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/news_add.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/news_add.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/news_edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/news_edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/setting_edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/setting_edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home/_category.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/_category.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home/_footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/_footer.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/home/_header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/_header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/main.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/main.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/profile/update-profile-information-form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/profile/update-profile-information-form.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/temp/template/AdminBSBMaterialDesign" beforeDir="false" afterPath="$PROJECT_DIR$/temp/template/AdminBSBMaterialDesign" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/temp/template/AdminBSBMaterialDesign/LICENSE.md" beforeDir="false" afterPath="$PROJECT_DIR$/temp/template/AdminBSBMaterialDesign/LICENSE.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/temp/template/AdminBSBMaterialDesign/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/temp/template/AdminBSBMaterialDesign/README.md" afterDir="false" />
@@ -3624,6 +3634,15 @@
       <change beforePath="$PROJECT_DIR$/temp/template/AdminBSBMaterialDesign/scss/themes/theme-red.scss" beforeDir="false" afterPath="$PROJECT_DIR$/temp/template/AdminBSBMaterialDesign/scss/themes/theme-red.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/temp/template/AdminBSBMaterialDesign/scss/themes/theme-teal.scss" beforeDir="false" afterPath="$PROJECT_DIR$/temp/template/AdminBSBMaterialDesign/scss/themes/theme-teal.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/temp/template/AdminBSBMaterialDesign/scss/themes/theme-yellow.scss" beforeDir="false" afterPath="$PROJECT_DIR$/temp/template/AdminBSBMaterialDesign/scss/themes/theme-yellow.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Feature/ApiTokenPermissionsTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/ApiTokenPermissionsTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Feature/BrowserSessionsTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/BrowserSessionsTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Feature/CreateApiTokenTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/CreateApiTokenTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Feature/DeleteAccountTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/DeleteAccountTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Feature/DeleteApiTokenTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/DeleteApiTokenTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Feature/ProfileInformationTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/ProfileInformationTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Feature/TwoFactorAuthenticationSettingsTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/TwoFactorAuthenticationSettingsTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Feature/UpdatePasswordTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/UpdatePasswordTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack.mix.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.mix.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -3781,7 +3800,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/admin" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -3791,6 +3810,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\byznr\OneDrive\Masaüstü\NewsPaperPhpProject\resources\views" />
       <recent name="C:\Users\byznr\OneDrive\Masaüstü\NewsPaperPhpProject\resources\views\admin" />
       <recent name="C:\Users\byznr\OneDrive\Masaüstü\NewsPaperPhpProject" />
     </key>
@@ -3825,7 +3845,14 @@
       <workItem from="1611247666599" duration="21362000" />
       <workItem from="1611309541152" duration="16430000" />
       <workItem from="1611604119609" duration="17334000" />
-      <workItem from="1612036042582" duration="11320000" />
+      <workItem from="1612036042582" duration="12084000" />
+      <workItem from="1612114874999" duration="15160000" />
+      <workItem from="1612181773857" duration="8242000" />
+      <workItem from="1612195842393" duration="840000" />
+      <workItem from="1612198197693" duration="15651000" />
+      <workItem from="1612277621320" duration="17841000" />
+      <workItem from="1612338248543" duration="3818000" />
+      <workItem from="1612369955317" duration="13541000" />
     </task>
     <servers />
   </component>

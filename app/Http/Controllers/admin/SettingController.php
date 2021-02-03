@@ -20,7 +20,8 @@ class SettingController extends Controller
     public function index()
     {
         $data= Setting::first();
-        if($data===null){
+        if($data===null)
+        {
             $data =new Setting();
             $data->title ='Proje Title';
             $data->save();
@@ -103,7 +104,7 @@ class SettingController extends Controller
         $data->references= $request->input('references');
         $data->status = $request->input('Status');
         $data->save();
-        return redirect()->route('admin_news');
+        return redirect()->route('admin_setting');
     }
 
     /**

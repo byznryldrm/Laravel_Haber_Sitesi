@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\admin\UserController;
 use Illuminate\Foundation\Application;
 use App\Http\Controllers\Homecontroller;
 use Illuminate\Support\Facades\Route;
@@ -37,8 +38,11 @@ Route::get('/', function () {
 Route::get('/', function () {
     return view('layouts.main');
 });
-Route::get('/home', [HomeController::class, 'index'])->name('home');
-
+Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/aboutus', [HomeController::class, 'aboutus'])->name('aboutus');
+Route::get('/megamenu', [HomeController::class, 'megamenu'])->name('megamenu');
+Route::get('/gundem', [HomeController::class, 'gundem'])->name('gundem');
+Route::get('/profil', [HomeController::class, 'profil'])->name('profil');
 
 // **** ADMİN ****
 Route::middleware('auth')->prefix('admin')->group(function(){
@@ -77,10 +81,16 @@ Route::middleware('auth')->prefix('admin')->group(function(){
     Route::post('setting/update', [App\Http\Controllers\admin\SettingController::class, 'update'])->name('admin_setting_update');
 
 });
+Route::middleware('auth')->prefix('myaccount')->namespace('myaccount')->group(function (){
+    Route::get('/',[UserController::class,'index'])->name('myprofile');
+});
+Route::middleware('auth')->prefix('user')->namespace('user')->group(function (){
+    Route::get('/profile',[UserController::class,'index'])->name('profile.show');
+});
 
 Route::get('/admin/login', [Homecontroller::class, 'login'])->name('admin_login');
 Route::post('/admin/logincheck', [Homecontroller::class, 'logincheck'])->name('admin_logincheck');
-Route::get('/admin/logout',[HomeController::class,'logout'])->name('admin_logout');
+Route::get('/logout',[HomeController::class,'logout'])->name('admin_logout');
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function (){
     return Inertia::render('Dashboard');
 })->name('dashboard');
