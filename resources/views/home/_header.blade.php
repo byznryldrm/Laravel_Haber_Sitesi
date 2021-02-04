@@ -155,7 +155,7 @@
                         </div>
                     </li>
                     <li class="dropdown magz-dropdown">
-                        <a href="{{route('gündem')}}">Gündem<i class="ion-ios-arrow-right"></i></a>
+                        <a href="{{route('gundem')}}">Gündem<i class="ion-ios-arrow-right"></i></a>
                         <ul class="dropdown-menu">
                             <li><a href="#">Politika</a></li>
                             <li><a href="#">3. Sayfa</a></li>
@@ -164,7 +164,6 @@
                             <li><a href="#">Ekonomi</a></li>
                         </ul>
                     </li>
-
                     <li class="dropdown magz-dropdown"><a href="{{route('profil')}}">Profil<i class="ion-ios-arrow-right"></i></a>
                         <ul class="dropdown-menu">
                             @if(\Illuminate\Support\Facades\Auth::check())

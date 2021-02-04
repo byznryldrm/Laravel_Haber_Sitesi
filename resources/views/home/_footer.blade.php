@@ -150,9 +150,9 @@
                 <div class="block">
                     <div class="block-body no-margin">
                         <ul class="footer-nav-horizontal">
-                            <li><a href="index.html">Home</a></li>
-                            <li><a href="#">Partner</a></li>
-                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="{{route('home')}}">Home</a></li>
+                            <li><a href="{{route('references')}}">References</a></li>
+                            <li><a href="{{route('contact')}}">Contact</a></li>
                             <li><a href="{{route('aboutus')}}">About</a></li>
                         </ul>
                     </div>

@@ -42,6 +42,11 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/aboutus', [HomeController::class, 'aboutus'])->name('aboutus');
 Route::get('/megamenu', [HomeController::class, 'megamenu'])->name('megamenu');
 Route::get('/gundem', [HomeController::class, 'gundem'])->name('gundem');
+Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
+//Route::post('/sendmessage', [HomeController::class, 'sendmessage'])->name('sendmessage');
+Route::get('/references', [HomeController::class, 'references'])->name('references');
+Route::get('/fag', [HomeController::class, 'fag'])->name('fag');
+Route::get('/news/{id}/{slug}', [HomeController::class, 'news'])->name('news');
 Route::get('/profil', [HomeController::class, 'profil'])->name('profil');
 
 // **** ADMİN ****

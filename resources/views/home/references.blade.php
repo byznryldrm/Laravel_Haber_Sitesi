@@ -1,6 +1,6 @@
 @extends ('layouts.main')
 
-@section('title','About Us -'. $setting->title)
+@section('title','References -'. $setting->title)
 
 @section('description'){{ $setting->description }}@endsection
 
@@ -13,12 +13,11 @@
             <div class="col-md-8 col-md-offset-2">
                 <ol class="breadcrumb">
                     <li><a href="{{route('home')}}">Home</a></li>
-                    <li class="active">About Us</li>
+                    <li class="active">References</li>
                 </ol>
-                <h1 class="page-title">About Us</h1>
-                <p class="page-subtitle">We will tell you who we are</p>
+                <h1 class="page-title">References</h1>
 
-                {{$setting->aboutus}}
+                {{$setting->references}}
 
             </div>
         </div>
