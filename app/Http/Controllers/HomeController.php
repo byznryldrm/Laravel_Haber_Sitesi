@@ -8,6 +8,7 @@ use App\Models\News;
 use App\Models\Setting;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use MongoDB\Driver\Session;
 use phpDocumentor\Reflection\DocBlock\Tags\Method;
 
 class Homecontroller extends Controller
@@ -27,21 +28,53 @@ class Homecontroller extends Controller
     {
         $setting = Setting::first();
         $slider = News::select('id','title','image','description','slug')->limit(4)->get();
+        $last= News::select('id','title','image','description','slug')->limit(4)->orderByDesc('id')->get();
+        $hot = News::select('id','title','image','description','slug')->limit(4)->inRandomOrder()->get();
+        $another = News::select('id','title','image','description','slug')->limit(4)->inRandomOrder()->get();
         $data=[
             'setting' => $setting,
             'slider' => $slider,
+            'last' => $last,
+            'hot' => $hot,
+            'another' => $another,
             'page' => 'home'
         ];
         return view('home.index',$data);
     }
     public function news($id,$slug)
     {
-
         $data= News::find($id);
         print_r($data);
         exit();
     }
-
+    public function sendmessage(Request $request)
+    {
+        $data=new Message();
+        $data->name=$request->input('name');
+        $data->email=$request->input('email');
+        $data->subject=$request->input('subject');
+        $data->message=$request->input('message');
+        $data->save();
+        return redirect()->route('contanct')->with('success','Mesajınız Kayıt Edilmiştir.');
+    }
+    public function category()
+    {
+        $setting = Setting::first();
+        $slider = News::select('id','title','image','description','slug')->get();
+        $data=[
+            'setting' => $setting,
+            'slider' => $slider,
+        ];
+        return view('home._category',$data);
+    }
+    public function categorynews($id, $slug)
+    {
+        $datalist = News::where('category_id',$id)->get();
+        $data = Category::find($id);
+        #print_r($data);
+        #exit();
+        return view('home.category_news', ['data' => $data,'datalist' => $datalist]);
+    }
     public function aboutus()
     {
 
@@ -54,15 +87,23 @@ class Homecontroller extends Controller
         return view('home.about');
     }
 
-    public function gundem()
+    public function haber()
+    {
+        return view('home._category');
+    }
+    public function köşeyazısı()
+    {
+        return view('home.about');
+    }
+    public function makale()
     {
         return view('home.about');
     }
 
-    public function contact()
+    public function contanct()
     {
         $setting = Setting::first();
-        return view('home.contact', ['setting' => $setting]);
+        return view('home.contanct', ['setting' => $setting]);
     }
 
 

@@ -44,8 +44,6 @@
                         </ul>
                     </div>
                 @endif
-
-
             </div>
         </div>
     </div>
@@ -65,15 +63,14 @@
                 <a href="#" data-toggle="sidebar" data-target="#sidebar"><i class="ion-ios-arrow-left"></i></a>
             </div>
             <div id="menu-list">
-                <ul class="nav-list">
+                <ul class="menu">
                     <li class="for-tablet nav-title"><a>Menu</a></li>
                     <li class="for-tablet"><a href="/login">Login</a></li>
                     <li class="for-tablet"><a href="/register">Register</a></li>
                     <li><a href="{{route('home')}}">HomePage</a></li>
 
-                    <li class="dropdown magz-dropdown">
-                        @include('home._category')
-                    </li>
+
+                  @include('home._category')
 
                     <li class="dropdown magz-dropdown magz-dropdown-megamenu"><a href="{{route('megamenu')}}">Mega Menu <i class="ion-ios-arrow-right"></i> <div class="badge">Hot</div></a>
                         <div class="dropdown-menu megamenu">
@@ -154,16 +151,7 @@
                             </div>
                         </div>
                     </li>
-                    <li class="dropdown magz-dropdown">
-                        <a href="{{route('gundem')}}">Gündem<i class="ion-ios-arrow-right"></i></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Politika</a></li>
-                            <li><a href="#">3. Sayfa</a></li>
-                            <li><a href="#">Eğitim</a></li>
-                            <li><a href="#">Sağlık</a></li>
-                            <li><a href="#">Ekonomi</a></li>
-                        </ul>
-                    </li>
+
                     <li class="dropdown magz-dropdown"><a href="{{route('profil')}}">Profil<i class="ion-ios-arrow-right"></i></a>
                         <ul class="dropdown-menu">
                             @if(\Illuminate\Support\Facades\Auth::check())
@@ -187,6 +175,7 @@
 
                         </ul>
                     </li>
+
                 </ul>
             </div>
         </div>

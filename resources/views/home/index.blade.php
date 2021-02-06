@@ -22,14 +22,6 @@
                                 <span class="sr-only">Next</span>
                             </a>
                         </div>
-                        <div class="owl-carousel owl-theme" id="headline">
-                            <div class="item">
-                                <a href="#"><div class="badge">Tip!</div> Vestibulum ante ipsum primis in faucibus orci</a>
-                            </div>
-                            <div class="item">
-                                <a href="#">Ut rutrum sodales mauris ut suscipit</a>
-                            </div>
-                        </div>
                     </div>
                     <div class="owl-carousel owl-theme slide" id="featured">
                         @foreach($slider as $rs)
@@ -42,13 +34,13 @@
                                 </figure>
                                 <div class="details">
                                     <div class="category"><a href="{{route('news', ['id'=>$rs->id, 'slug'=>$rs->slug])}}"></a></div>
+
                                     <h1><a href="{{$rs->title}}">
                                             <br>
                                             {{$rs->description}}
                                         </a></h1>
                                 </div>
                             </article>
-
                         </div>
                         @endforeach
                     </div>

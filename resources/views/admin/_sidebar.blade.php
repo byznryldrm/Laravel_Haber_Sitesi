@@ -59,6 +59,12 @@
                     </a>
                 </li>
                 <li>
+                    <a href="{{ route('admin_message') }}">
+                        <i class="material-icons">layers</i>
+                        <span>Message</span>
+                    </a>
+                </li>
+                <li>
                     <a href="javascript:void(0);" class="menu-toggle">
                         <i class="material-icons">widgets</i>
                         <span>Widgets</span>

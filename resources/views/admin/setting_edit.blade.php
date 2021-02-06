@@ -27,7 +27,7 @@
                                     <li role="presentation"><a href="#aboutus" data-toggle="tab">
                                             <i class="material-icons">bookmark</i> ABOUT US</a>
                                     </li>
-                                    <li role="presentation"><a href="#contact" data-toggle="tab">
+                                    <li role="presentation"><a href="#contanct" data-toggle="tab">
                                             <i class="material-icons">settings_phone</i> CONTANCT</a>
                                     </li>
                                     <li role="presentation"><a href="#references" data-toggle="tab">
@@ -103,11 +103,8 @@
                                                 </div>
                                             </div>
                                         </div>
-
                                     </div>
                                     <div role="tabpanel" class="tab-pane fade" id="smtp">
-
-
                                         <label >Smtp Server</label>
                                         <div class="form-group">
                                             <div class="form-line">
@@ -134,7 +131,6 @@
                                         </div>
                                     </div>
                                     <div role="tabpanel" class="tab-pane fade" id="social">
-
                                         <label >Facebook</label>
                                         <div class="form-group">
                                             <div class="form-line">
@@ -158,15 +154,15 @@
                                         <label >About Us</label>
                                         <div class="form-group">
                                             <div class="form-line">
-                                                <textarea name="aboutus" value="{{$data->aboutus}}" class="form-control" > </textarea>
+                                                <input type="text" name="aboutus" value="{{$data->aboutus}}" class="form-control" >
                                             </div>
                                         </div>
                                     </div>
-                                    <div role="tabpanel" class="tab-pane fade" id="contact">
+                                    <div role="tabpanel" class="tab-pane fade" id="contanct">
                                         <label >Contact</label>
                                         <div class="form-group">
                                             <div class="form-line">
-                                                <textarea name="contact" value="{{$data->contact}}" class="form-control" > </textarea>
+                                                <input type="text" name="contanct" value="{{$data->contanct}}" class="form-control" >
                                             </div>
                                         </div>
                                     </div>
@@ -174,7 +170,7 @@
                                         <label >References</label>
                                         <div class="form-group">
                                             <div class="form-line">
-                                                <textarea name="references" value="{{$data->references}}" class="form-control" > </textarea>
+                                                <input type="text" name="references" value="{{$data->references}}" class="form-control" >
                                             </div>
                                         </div>
                                     </div>
@@ -187,7 +183,7 @@
                 </div>
             </form>
         </div>
-    </section>
+</section>
 @endsection
 
 
