@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Category;
+use App\Models\Image;
 use App\Models\Message;
 use App\Models\News;
 use App\Models\Setting;
@@ -44,8 +45,10 @@ class Homecontroller extends Controller
     public function news($id,$slug)
     {
         $data= News::find($id);
-        print_r($data);
-        exit();
+        $datalist = Image::where('news_id',$id)->get();
+        #print_r($data);
+        #exit();
+        return view('home.news_detail',['data' => $data,'datalist' => $datalist]);
     }
     public function sendmessage(Request $request)
     {
@@ -71,6 +74,7 @@ class Homecontroller extends Controller
     {
         $datalist = News::where('category_id',$id)->get();
         $data = Category::find($id);
+
         #print_r($data);
         #exit();
         return view('home.category_news', ['data' => $data,'datalist' => $datalist]);

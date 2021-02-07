@@ -26,11 +26,11 @@
                     <h1 class="block-title">Popular Tags <div class="right"><a href="#">See All <i class="ion-ios-arrow-thin-right"></i></a></div></h1>
                     <div class="block-body">
                         <ul class="tags">
-                            <li><a href="#">gazete</a></li>
-                            <li><a href="#">makale</a></li>
-                            <li><a href="#">haber</a></li>
-                            <li><a href="#">güncel</a></li>
-                            <li><a href="#">köşe yazısı</a></li>
+                            <li><a href="http://127.0.0.1:8000/categorynews/1/Haber">Haber</a></li>
+                            <li><a href=http://127.0.0.1:8000/categorynews/3/Makale">Makale</a></li>
+                            <li><a href="http://127.0.0.1:8000/news/2/Ekonomi">Ekonomi</a></li>
+                            <li><a href="http://127.0.0.1:8000/news/16/Magazin">Magazin</a></li>
+                            <li><a href="http://127.0.0.1:8000/news/17/sosyal%20ya%C5%9Fam">Sosyal Yaşam</a></li>
                         </ul>
                     </div>
                 </div>
@@ -51,62 +51,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-3 col-sm-6 col-xs-12">
-                <div class="block">
-                    <h1 class="block-title">Latest News</h1>
-                    <div class="block-body">
-                        <article class="article-mini">
-                            <div class="inner">
-                                <figure>
-                                    <a href="single.html">
-                                        <img src="{{asset('assets')}}/images/news/img12.jpg" alt="Sample Article">
-                                    </a>
-                                </figure>
-                                <div class="padding">
-                                    <h1><a href="single.html">Donec consequat lorem quis augue pharetra</a></h1>
-                                </div>
-                            </div>
-                        </article>
-                        <article class="article-mini">
-                            <div class="inner">
-                                <figure>
-                                    <a href="single.html">
-                                        <img src="{{asset('assets')}}/images/news/img14.jpg" alt="Sample Article">
-                                    </a>
-                                </figure>
-                                <div class="padding">
-                                    <h1><a href="single.html">eu dapibus risus aliquam etiam ut venenatis</a></h1>
-                                </div>
-                            </div>
-                        </article>
-                        <article class="article-mini">
-                            <div class="inner">
-                                <figure>
-                                    <a href="single.html">
-                                        <img src="{{asset('assets')}}/images/news/img15.jpg" alt="Sample Article">
-                                    </a>
-                                </figure>
-                                <div class="padding">
-                                    <h1><a href="single.html">Nulla facilisis odio quis gravida vestibulum </a></h1>
-                                </div>
-                            </div>
-                        </article>
-                        <article class="article-mini">
-                            <div class="inner">
-                                <figure>
-                                    <a href="single.html">
-                                        <img src="{{asset('assets')}}/images/news/img16.jpg" alt="Sample Article">
-                                    </a>
-                                </figure>
-                                <div class="padding">
-                                    <h1><a href="single.html">Proin venenatis pellentesque arcu vitae </a></h1>
-                                </div>
-                            </div>
-                        </article>
-                        <a href="#" class="btn btn-magz white btn-block">See All <i class="ion-ios-arrow-thin-right"></i></a>
-                    </div>
-                </div>
-            </div>
+
             <div class="col-md-3 col-xs-12 col-sm-6">
                 <div class="block">
                     <h1 class="block-title">Follow Us</h1>

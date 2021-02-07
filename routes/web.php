@@ -51,7 +51,6 @@ Route::get('/fag', [HomeController::class, 'fag'])->name('fag');
 Route::get('/profil', [HomeController::class, 'profil'])->name('profil');
 Route::post('/sendmessage', [HomeController::class, 'sendmessage'])->name('sendmessage');
 Route::get('/news/{id}/{slug}', [HomeController::class, 'news'])->name('news');
-Route::get('/category', [HomeController::class, 'category'])->name('category');
 Route::get('/categorynews/{id}/{slug}', [HomeController::class, 'categorynews'])->name('categorynews');
 
 
