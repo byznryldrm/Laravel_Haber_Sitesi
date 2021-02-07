@@ -51,7 +51,6 @@
                     </div>
                 </div>
             </div>
-
             <div class="col-md-3 col-xs-12 col-sm-6">
                 <div class="block">
                     <h1 class="block-title">Follow Us</h1>

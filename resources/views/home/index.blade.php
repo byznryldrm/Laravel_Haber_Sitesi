@@ -33,7 +33,9 @@
                                     <img src="{{Storage::url($rs->image)}}" alt="Sample Article">
                                 </figure>
                                 <div class="details">
-                                    <div class="category"><a href="{{route('news', ['id'=>$rs->id, 'slug'=>$rs->slug])}}"></a></div>
+                                    <div class="category" ><a href="{{route('news', ['id'=>$rs->id, 'slug'=>$rs->slug])}}"></a>
+                                        <li>{{ \App\Http\Controllers\Admin\CategoryController::getParentsTree($rs, $rs->title)}} News</li>
+                                    </div>
 
                                     <h1><a href="{{$rs->title}}">
                                             <br>

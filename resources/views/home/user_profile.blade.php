@@ -11,6 +11,7 @@
                     <ol class="breadcrumb">
                         <li><a href="{{route('home')}}">HomePage</a></li>
                         <li class="active">Profile</li>
+                        @include('home.usermenu')
                     </ol>
                     <div id="main" class="col-md-10">
                         @include('profile.show')
