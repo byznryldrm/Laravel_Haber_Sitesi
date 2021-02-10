@@ -50,7 +50,7 @@
                             <div class="form-group">
                                 <label>Detail</label>
                                 <br>
-                                <textarea class="form-control" id="detail" name="Detail"value="{{$data->detail}}"></textarea>
+                                <textarea class="form-control" id="detail" name="Detail" value="{!! $data->detail !!}"></textarea>
                             </div>
                             <div class="form-group form-float">
                                 <div class="form-line">

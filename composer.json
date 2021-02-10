@@ -14,12 +14,12 @@
         "guzzlehttp/guzzle": "^7.0.1",
         "inertiajs/inertia-laravel": "^0.3.5",
         "laravel/framework": "^8.12",
-        "laravel/jetstream": "^2.1",
+        "laravel/jetstream": "^2.0",
         "laravel/sanctum": "^2.6",
         "laravel/tinker": "^2.5",
         "livewire/livewire": "^2.0",
         "tightenco/ziggy": "^1.0",
-      "ext-http": "*"
+        "ext-http": "*"
     },
     "require-dev": {
         "facade/ignition": "^2.5",

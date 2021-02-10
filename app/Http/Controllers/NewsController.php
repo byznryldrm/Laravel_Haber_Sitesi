@@ -106,8 +106,8 @@ class NewsController extends Controller
         $data->type= $request->input('Type');
         $data->image= Storage::putFile('images', $request->file('İmage'));
 
-        if ($request->file('İmage')!=null){
-            $data->image= Storage::putFile('images', $request->file('İmage'));
+        if ($request->file('image')!=null){
+            $data->image= Storage::putFile('images', $request->file('image'));
         }
 
         $data->save();

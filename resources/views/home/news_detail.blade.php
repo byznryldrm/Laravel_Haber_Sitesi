@@ -12,41 +12,6 @@
             <div class="row">
                 <div class="col-md-4 sidebar" id="sidebar">
                     <aside>
-                        <div class="col-md-6 col-sm-6">
-                            <h1 class="title-col">
-                                Hot News
-                                <div class="carousel-nav" id="hot-news-nav">
-                                    <div class="prev">
-                                        <i class="ion-ios-arrow-left"></i>
-                                    </div>
-                                    <div class="next">
-                                        <i class="ion-ios-arrow-right"></i>
-                                    </div>
-                                </div>
-                            </h1>
-                            <div class="body-col vertical-slider" data-max="4" data-nav="#hot-news-nav" data-item="article">
-                                    <article class="article-mini">
-                                        <div class="inner">
-                                            <figure>
-                                                @foreach($datalist as  $rs)
-                                                    <img src="{{Storage::url($rs->image)}}" alt="Sample Article">
-                                                @endforeach
-                                            </figure>
-                                            <div class="padding">
-                                                <h1>
-                                                    <br>
-                                                    {{$data->description}}
-                                                </h1>
-                                                <div class="detail">
-                                                    <div class="category"><a href="{{$data->title}}"></a></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </article>
-                            </div>
-                        </div>
-                    </aside>
-                    <aside>
                         <div class="aside-body">
                             <form class="newsletter">
                                 <div class="icon">
@@ -74,7 +39,6 @@
                         <header>
                             <ul class="details">
                                 <li><a href="{{$data->title}}"></a></li>
-                                <li>By <a href="#">John Doe</a></li>
                             </ul>
                         </header>
                         <div class="main">
@@ -110,80 +74,6 @@
                             </div>
                         </footer>
                     </article>
-                    <div class="line">
-                        <div>Author</div>
-                    </div>
-                    <div class="author">
-                        <figure>
-                            <img src="images/img01.jpg">
-                        </figure>
-                        <div class="details">
-                            <div class="job">Web Developer</div>
-                            <h3 class="name">John Doe</h3>
-                            <p>Nulla sagittis rhoncus nisi, vel gravida ante. Nunc lobortis condimentum elit, quis porta ipsum rhoncus vitae. Curabitur magna leo, porta vel fringilla gravida, consectetur in libero. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</p>
-                            <ul class="social trp sm">
-                                <li>
-                                    <a href="#" class="facebook">
-                                        <svg><rect/></svg>
-                                        <i class="ion-social-facebook"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" class="twitter">
-                                        <svg><rect/></svg>
-                                        <i class="ion-social-twitter"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" class="youtube">
-                                        <svg><rect/></svg>
-                                        <i class="ion-social-youtube"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" class="googleplus">
-                                        <svg><rect/></svg>
-                                        <i class="ion-social-googleplus"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="line"><div>You May Also Like</div></div>
-                    <div class="row">
-                        <article class="article related col-md-6 col-sm-6 col-xs-12">
-                            <div class="inner">
-                                <figure>
-                                    <a href="#">
-                                        <img src="images/news/img03.jpg">
-                                    </a>
-                                </figure>
-                                <div class="padding">
-                                    <h2><a href="#">Duis aute irure dolor in reprehenderit in voluptate</a></h2>
-                                    <div class="detail">
-                                        <div class="category"><a href="category.html">Lifestyle</a></div>
-                                        <div class="time">December 26, 2016</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </article>
-                        <article class="article related col-md-6 col-sm-6 col-xs-12">
-                            <div class="inner">
-                                <figure>
-                                    <a href="#">
-                                        <img src="images/news/img08.jpg">
-                                    </a>
-                                </figure>
-                                <div class="padding">
-                                    <h2><a href="#">Duis aute irure dolor in reprehenderit in voluptate</a></h2>
-                                    <div class="detail">
-                                        <div class="category"><a href="category.html">Lifestyle</a></div>
-                                        <div class="time">December 26, 2016</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
                     <div class="line thin"></div>
                     <div class="comments">
                         <h2 class="title">3 Responses <a href="#">Write a Response</a></h2>

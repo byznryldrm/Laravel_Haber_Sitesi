@@ -24,6 +24,8 @@
 
     <!-- Morris Chart Css-->
     <link href="{{asset('assets/admin')}}/plugins/morrisjs/morris.css" rel="stylesheet" />
+    <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
+    <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
 
     <!-- Custom Css -->
     <link href="{{asset('assets/admin')}}/css/style.css" rel="stylesheet">

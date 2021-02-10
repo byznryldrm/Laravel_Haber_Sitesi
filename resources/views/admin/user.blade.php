@@ -14,7 +14,7 @@
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <div class="card">
                 <div class="header">
-                    <a href="{{ route('admin_news_add') }}" class="btn btn-primary waves-effect" type="submit">Add News</a>
+                    <a href="{{ route('admin_user_add') }}" class="btn btn-primary waves-effect" type="submit">Add News</a>
                     <input type="checkbox" checked data-toggle="toggle">
 
                     <ul class="header-dropdown m-r--5">
@@ -36,13 +36,11 @@
                             <thead>
                             <tr>
                                 <th>Id</th>
-                                <th>Category Id</th>
-                                <th>Title</th>
-                                <th>Description</th>
-                                <th>Type</th>
                                 <th>Image</th>
-                                <th>Image Gallery</th>
-                                <th>Status</th>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Address</th>
+                                <th>Roles</th>
                                 <th>Edit</th>
                                 <th>Delete</th>
                             </tr>
@@ -51,25 +49,23 @@
                             @foreach($datalist as $rs)
                             <tr>
                                 <td>{{ $rs->id }}</td>
-                                <td>{{ \App\Http\Controllers\Admin\CategoryController::getParentsTree($rs->category, $rs->category->title)}}</td>
-                                <td>{{ $rs->title}}</td>
-                                <td>{{ $rs->description}}</td>
-                                <td>{{ $rs->type}}</td>
-
                                 <td>
-                                    @if($rs->image)
-                                        <img src="{{Storage::url($rs->image)}}" height="30" alt="">
+                                    @if($rs->profile_photo_path)
+                                        <img src="{{Storage::url($rs->profile_photo_path)}}" height="30" alt="">
                                     @endif
                                 </td>
-                                <td><a href="{{route('admin_image_add', ['news_id' => $rs->id])}}" onclick="return !window.open(this.href, '','top=50, left=100, width=1100, height=700')">
-                                        <img src="{{asset('assets/admin/images')}}/gallery.png" height="25">
-                                    </a>
-                                </td>
+                                <td>{{ $rs->name}}</td>
+                                <td>{{ $rs->email}}</td>
+                                <td>{{ $rs->address}}</td>
                                 <td>
-                                    <strong>{{$rs->status}}</strong>
+                                    @foreach($rs->roles as $row)
+                                        {{$row->name}},
+                                    @endforeach
+                                    <a href="{{route('admin_user_roles',['id'=> $rs->id])}}" onclick="return !window.open(this.href, '','top=50, left=100, width=1100, height=700')"><i class="material-icons">add</i></a>
+
                                 </td>
-                                <td><a href="{{route('admin_news_edit', ['id' => $rs->id])}}"><img src="{{asset('assets/admin/images')}}/edit.png" height="25"></a></td>
-                                <td><a href="{{route('admin_news_delete', ['id' => $rs->id])}}" onclick="return confirm('Delete! Are you sure?')"><img src="{{asset('assets/admin/images')}}/delete.png" height="25"></a></td>
+                                <td><a href="{{route('admin_user_edit', ['id' => $rs->id])}}"><img src="{{asset('assets/admin/images')}}/edit.png" height="25"></a></td>
+                                <td><a href="{{route('admin_user_delete', ['id' => $rs->id])}}" onclick="return confirm('Delete! Are you sure?')"><img src="{{asset('assets/admin/images')}}/delete.png" height="25"></a></td>
                             </tr>
                             @endforeach
                             </tbody>

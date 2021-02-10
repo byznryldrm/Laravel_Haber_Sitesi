@@ -72,94 +72,17 @@
 
                   @include('home._category')
 
-                    <li class="dropdown magz-dropdown magz-dropdown-megamenu"><a href="{{route('megamenu')}}">Mega Menu <i class="ion-ios-arrow-right"></i> <div class="badge">Hot</div></a>
-                        <div class="dropdown-menu megamenu">
-                            <div class="megamenu-inner">
-                                <div class="row">
-                                    <div class="col-md-3">
-                                        <div class="row">
-                                            <div class="col-md-12">
-                                                <h2 class="megamenu-title">Trending</h2>
-                                            </div>
-                                        </div>
-                                        <ul class="vertical-menu">
-                                            <li><a href="#"><i class="ion-ios-circle-outline"></i> Mega menu is a new feature</a></li>
-                                            <li><a href="#"><i class="ion-ios-circle-outline"></i> This is an example</a></li>
-                                            <li><a href="#"><i class="ion-ios-circle-outline"></i> For a submenu item</a></li>
-                                            <li><a href="#"><i class="ion-ios-circle-outline"></i> You can add</a></li>
-                                            <li><a href="#"><i class="ion-ios-circle-outline"></i> Your own items</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="col-md-9">
-                                        <div class="row">
-                                            <div class="col-md-12">
-                                                <h2 class="megamenu-title">Featured Posts</h2>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <article class="article col-md-4 mini">
-                                                <div class="inner">
-                                                    <figure>
-                                                        <a href="single.html">
-                                                            <img src="{{asset('assets')}}/images/news/img10.jpg" alt="Sample Article">
-                                                        </a>
-                                                    </figure>
-                                                    <div class="padding">
-                                                        <div class="detail">
-                                                            <div class="time">December 10, 2016</div>
-                                                            <div class="category"><a href="category.html">Healthy</a></div>
-                                                        </div>
-                                                        <h2><a href="single.html">Duis aute irure dolor in reprehenderit in voluptate</a></h2>
-                                                    </div>
-                                                </div>
-                                            </article>
-                                            <article class="article col-md-4 mini">
-                                                <div class="inner">
-                                                    <figure>
-                                                        <a href="single.html">
-                                                            <img src="{{asset('assets')}}/images/news/img11.jpg" alt="Sample Article">
-                                                        </a>
-                                                    </figure>
-                                                    <div class="padding">
-                                                        <div class="detail">
-                                                            <div class="time">December 13, 2016</div>
-                                                            <div class="category"><a href="category.html">Lifestyle</a></div>
-                                                        </div>
-                                                        <h2><a href="single.html">Duis aute irure dolor in reprehenderit in voluptate</a></h2>
-                                                    </div>
-                                                </div>
-                                            </article>
-                                            <article class="article col-md-4 mini">
-                                                <div class="inner">
-                                                    <figure>
-                                                        <a href="single.html">
-                                                            <img src="{{asset('assets')}}/images/news/img14.jpg" alt="Sample Article">
-                                                        </a>
-                                                    </figure>
-                                                    <div class="padding">
-                                                        <div class="detail">
-                                                            <div class="time">December 14, 2016</div>
-                                                            <div class="category"><a href="category.html">Travel</a></div>
-                                                        </div>
-                                                        <h2><a href="single.html">Duis aute irure dolor in reprehenderit in voluptate</a></h2>
-                                                    </div>
-                                                </div>
-                                            </article>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
 
                     <li class="dropdown magz-dropdown"><a href="{{route('profil')}}">Profil<i class="ion-ios-arrow-right"></i></a>
                         <ul class="dropdown-menu">
                             @if(\Illuminate\Support\Facades\Auth::check())
                                 <h11> <i class="icon ion-person"></i>{{\Illuminate\Support\Facades\Auth::user()->name}}</h11>
                             @else
-                                <li><a href="{{route('myprofile')}}"><i class="icon ion-person"></i> My Account</a></li>
+                                <li><a href="{{route('myprofile')}}"><i class="icon ion-person"></i></a></li>
                             @endif
-                            <li><a href="#"><i class="icon ion-heart"></i> Favorite</a></li>
+                                @if(\Illuminate\Support\Facades\Auth::check())
+                            <li><a href="{{route('myprofile')}}"><i class="icon ion-heart"></i>My Account</a></li>
+                                @endif
                             <li><a href="#"><i class="icon ion-chatbox"></i> Comments</a></li>
                             <li><a href="#"><i class="icon ion-key"></i> Authentication</a>
                                 <ul class="dropdown-menu">

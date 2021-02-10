@@ -58,6 +58,8 @@ Route::get('/categorynews/{id}/{slug}', [HomeController::class, 'categorynews'])
 
 // **** ADMİN ****
 Route::middleware('auth')->prefix('admin')->group(function(){
+    #Admin role
+    Route::middleware('admin')->group(function (){
 
     Route::get('/', [App\Http\Controllers\admin\homecontroller::class, 'index'])->name('admin_home');
 
@@ -102,6 +104,30 @@ Route::middleware('auth')->prefix('admin')->group(function(){
     Route::get('setting', [App\Http\Controllers\admin\SettingController::class, 'index'])->name('admin_setting');
     Route::post('setting/update', [App\Http\Controllers\admin\SettingController::class, 'update'])->name('admin_setting_update');
 
+    //***Report***
+    Route::prefix('report')->group(function () {
+        Route::get('/', [\App\Http\Controllers\admin\ReportController::class, 'index'])->name('admin_report');
+        Route::get('create', [\App\Http\Controllers\admin\ReportController::class, 'create'])->name('admin_report_add');
+        Route::post('store', [\App\Http\Controllers\admin\ReportController::class, 'store'])->name('admin_report_store');
+        Route::get('edit/{id}',[\App\Http\Controllers\admin\ReportController::class, 'edit'])->name('admin_report_edit');
+        Route::post('update/{id}',[\App\Http\Controllers\admin\ReportController::class, 'update'])->name('admin_report_update');
+        Route::get('delete/{id}',[\App\Http\Controllers\admin\ReportController::class, 'destroy'])->name('admin_report_delete');
+        Route::get('show/{id}',[\App\Http\Controllers\admin\ReportController::class, 'show'])->name('admin_report_show');
+    });
+    Route::prefix('user')->group(function () {
+        Route::get('/', [UserController::class, 'index'])->name('admin_users');
+        Route::get('create', [UserController::class, 'create'])->name('admin_user_add');
+        Route::post('store', [UserController::class, 'store'])->name('admin_user_store');
+        Route::get('edit/{id}',[UserController::class, 'edit'])->name('admin_user_edit');
+        Route::post('update/{id}',[UserController::class, 'update'])->name('admin_user_update');
+        Route::get('delete/{id}',[UserController::class, 'destroy'])->name('admin_user_delete');
+        Route::get('show/{id}',[UserController::class, 'show'])->name('admin_user_show');
+        Route::get('userrole/{id}',[UserController::class, 'user_roles'])->name('admin_user_roles');
+        Route::post('userrolestore/{id}',[UserController::class, 'user_role_store'])->name('admin_user_role_add');
+        Route::get('userroledelete/{userid}/{roleid}',[UserController::class, 'user_role_delete'])->name('admin_user_role_delete');
+    });
+
+    });
 });
 Route::middleware('auth')->prefix('myaccount')->namespace('myaccount')->group(function (){
     Route::get('/',[UserController::class,'index'])->name('myprofile');
@@ -118,12 +144,23 @@ Route::middleware('auth')->prefix('user')->namespace('user')->group(function (){
         Route::get('delete/{id}',[NewsController::class, 'destroy'])->name('user_news_delete');
         Route::get('show',[NewsController::class, 'show'])->name('user_news_show');
     });
+
     //***News Image Gallery***
     Route::prefix('image')->group(function () {
         Route::get('create/{news_id}', [App\Http\Controllers\admin\ImageController::class, 'create'])->name('user_image_add');
         Route::post('store/{news_id}', [App\Http\Controllers\admin\ImageController::class, 'store'])->name('user_image_store');
         Route::get('delete/{id}/{news_id}',[App\Http\Controllers\admin\ImageController::class, 'destroy'])->name('user_image_delete');
         Route::get('show',[App\Http\Controllers\admin\ImageController::class, 'show'])->name('admin_image_show');
+    });
+    //***Report***
+    Route::prefix('report')->group(function () {
+        Route::get('/', [\App\Http\Controllers\ReportController::class, 'index'])->name('user_report');
+        Route::get('create', [\App\Http\Controllers\ReportController::class, 'create'])->name('user_report_add');
+        Route::post('store', [\App\Http\Controllers\ReportController::class, 'store'])->name('user_report_store');
+        Route::get('edit/{id}',[\App\Http\Controllers\ReportController::class, 'edit'])->name('user_report_edit');
+        Route::post('update/{id}',[\App\Http\Controllers\ReportController::class, 'update'])->name('user_report_update');
+        Route::get('delete/{id}',[\App\Http\Controllers\ReportController::class, 'destroy'])->name('user_report_delete');
+        Route::get('show/{id}',[\App\Http\Controllers\ReportController::class, 'show'])->name('user_report_show');
     });
 });
 

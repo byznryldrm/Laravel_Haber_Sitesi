@@ -28,7 +28,7 @@ class Homecontroller extends Controller
     public function index()
     {
         $setting = Setting::first();
-        $slider = News::select('id','title','image','description','slug')->limit(4)->get();
+        $slider = News::select('id','title','image','description','slug', 'status')->limit(4)->get();
         $last= News::select('id','title','image','description','slug')->limit(4)->orderByDesc('id')->get();
         $hot = News::select('id','title','image','description','slug')->limit(4)->inRandomOrder()->get();
         $another = News::select('id','title','image','description','slug')->limit(4)->inRandomOrder()->get();

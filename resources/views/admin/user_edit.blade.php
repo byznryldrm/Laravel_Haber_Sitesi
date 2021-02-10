@@ -7,88 +7,42 @@
     <section class="content">
         <div class="card">
             <div class="card-header">
-                <h2>Edit News</h2>
+                <h2>Edit</h2>
             </div>
         </div>
         <div class="card-body">
             <div class="card">
                 <div class="body">
-                    <form id="form_validation" action="{{ route('admin_news_update',['id' => $data->id])}}" method="POST" enctype="multipart/form-data">
+                    <form id="form_validation" action="{{ route('admin_user_update',['id' => $data->id])}}" method="post" enctype="multipart/form-data">
                         @csrf
-                        <div class="form-group">
-                            <label>Category</label>
-                            <select class="form-control" name="Category_id" show-tick>
-                                @foreach($datalist as $rs)
-                                    <option value="{{ $rs->id}}" @if($rs->id == $data->category_id) selected="selected" @endif>
-                                        {{ \App\Http\Controllers\Admin\CategoryController::getParentsTree($rs, $rs->title)}}
-                                    </option>
-                                @endforeach
-                            </select>
-                        </div>
                         <div class="form-group form-float">
                             <div class="form-line">
-                                <input type="text" class="form-control" name="Title" value="{{$data->title}}" required="" aria-required="true">
-                                <label>Title</label>
+                                <input type="text" class="form-control" name="Name" value="{{$data->name}}" required="" aria-required="true">
+                                <label>Name</label>
                             </div>
                         </div>
                         <div class="form-group form-float">
                             <div class="form-line">
-                                <input type="text" class="form-control" name="Keywords" value="{{$data->keywords}}" required="" aria-required="true">
-                                <label>Keywords</label>
+                                <input type="text" class="form-control" name="Email" value="{{$data->email}}" required="" aria-required="true">
+                                <label>Email</label>
                             </div>
                         </div>
                         <div class="form-group form-float">
                             <div class="form-line">
-                                <input type="text" class="form-control" name="Description" value="{{$data->description}}" required="" aria-required="true">
-                                <label>description</label>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label>Detail</label>
-                            <br>
-                            <textarea class="form-control" id="detail" name="Detail" >{!! $data->detail !!}</textarea>
-                        </div>
-                        <div class="form-group form-float">
-                            <div class="form-line">
-                                <input type="text" class="form-control " name="Type" value="{{$data->type}}" aria-required="true">
-                                <label>Type</label>
+                                <input type="text" class="form-control" name="Address" value="{{$data->address}}" required="" aria-required="true">
+                                <label>Address</label>
                             </div>
                         </div>
                         <div class="form-group form-float">
                             <div class="form-line">
-                                <input type="file" class="form-control" name="İmage" >
-                                <label>İmage</label>
-                                @if($rs->image)
-                                    <img src="{{Storage::url($rs->image)}}" height="100" alt="">
+                                <input type="file" class="form-control" name="Image" >
+                                <label>Image</label>
+                                @if($data->profile_photo_path)
+                                    <img src="{{Storage::url($data->profile_photo_path)}}" height="100" alt="">
                                 @endif
                             </div>
                         </div>
-                        <div class="form-group form-float">
-                            <div class="form-line">
-                                <input type="text" class="form-control" name="Slug" value="{{$data->slug}}" aria-required="true">
-                                <label>Slug</label>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="form-line">
-                                <div class="row clearfix">
-                                    <div class="col-sm-6">
-                                        <label >Status</label>
-                                        <select class="form-control" name="Status" show-tick>
-                                            <option selected="selected">{{$data->status}}</option>
-                                            <option>False</option>
-                                            <option>True</option>
-
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <input type="checkbox" id="checkbox" name="checkbox">
-                            <label for="checkbox">I have read and accept the terms</label>
-                        </div>
-                        <button class="btn btn-primary waves-effect" type="submit">Update News</button>
+                        <button class="btn btn-primary waves-effect" type="submit">Update</button>
                     </form>
                 </div>
             </div>

@@ -72,6 +72,7 @@
             <a href="javascript:void(0);" class="bars"></a>
             <a class="navbar-brand" href="{{ route('admin_home') }}">ADMIN </a>
         </div>
+        @include('home.message')
         <div class="collapse navbar-collapse" id="navbar-collapse">
             <ul class="nav navbar-nav navbar-right">
                 <!-- Call Search -->
